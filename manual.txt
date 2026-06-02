@@ -1,0 +1,203 @@
+EcoSport X — Owner's Manual
+Version 2.1 | EcoRide Technologies Pvt. Ltd.
+
+================================================================================
+SECTION 1: PRODUCT OVERVIEW
+================================================================================
+
+The EcoSport X is EcoRide's flagship smart electric scooter, engineered for urban commuters
+who demand performance, reliability, and connectivity. It combines a high-torque brushless
+motor with an intelligent battery management system (BMS) and a companion mobile app for
+real-time diagnostics.
+
+Model Variants:
+- EcoSport X Standard  : 36V / 10Ah battery, top speed 25 km/h, range up to 40 km
+- EcoSport X Pro       : 48V / 15Ah battery, top speed 35 km/h, range up to 65 km
+- EcoSport X Pro+      : 48V / 20Ah battery, top speed 35 km/h, range up to 90 km
+
+Scooter Weight        : 14.5 kg (Standard), 16.2 kg (Pro), 17.8 kg (Pro+)
+Max Rider Weight      : 120 kg
+Ingress Protection    : IP54 (splash-resistant, not waterproof)
+Tire Type             : 10-inch self-sealing pneumatic tires
+Brakes                : Dual disc brakes with regenerative braking on rear wheel
+Display               : 3.5-inch LCD with speed, battery level, trip distance, and mode
+
+================================================================================
+SECTION 2: BATTERY & CHARGING
+================================================================================
+
+Battery Type          : Lithium-ion (LiPo cells, Grade A)
+Charging Input        : 100–240V AC, 50/60Hz universal adapter
+Standard Charge Time  : 4–5 hours (0% to 100%) for Standard model
+Pro Charge Time       : 5–6 hours (0% to 100%) for Pro and Pro+ models
+Fast Charge (optional): 2.5–3 hours using the EcoRide Fast Charger accessory (sold separately)
+Battery Lifespan      : Rated for 800 full charge cycles before capacity drops below 80%
+Operating Temperature : 0°C to 45°C. Do not charge below 0°C or above 45°C.
+
+Battery Care Tips:
+- Avoid storing the scooter at below 20% charge for extended periods.
+- For long-term storage (>2 weeks), maintain charge between 40–60%.
+- Do not use third-party chargers. EcoRide is not liable for battery damage caused by
+  non-certified charging accessories.
+- The battery is non-removable on Standard models. Pro and Pro+ batteries can be
+  detached using the EcoRide Battery Key (included in Pro/Pro+ box).
+
+Charging Indicator Lights (on charger brick):
+- Red solid     : Charging in progress
+- Green solid   : Fully charged
+- Red flashing  : Charging error — check cable connection or contact support
+
+================================================================================
+SECTION 3: GETTING STARTED
+================================================================================
+
+Unboxing Checklist:
+- EcoSport X scooter (folded)
+- Charger adapter (regional plug)
+- EcoRide Battery Key (Pro/Pro+ only)
+- Quick Start Card
+- Reflective ankle strap
+- This manual
+
+Initial Setup Steps:
+1. Unfold the scooter and click the stem into place until you hear a firm click.
+2. Charge the scooter fully before first use.
+3. Download the EcoRide app (iOS / Android) and create an account.
+4. In the app, tap "Add Scooter" and scan the QR code on the base of the deck.
+5. Register your scooter with your purchase receipt to activate the warranty.
+
+Riding Modes:
+- Eco Mode   : Top speed limited to 15 km/h. Best range. Recommended for beginners.
+- Standard   : Top speed 25 km/h (Standard) or 35 km/h (Pro/Pro+).
+- Sport Mode : Instant torque boost. Higher power draw. Available on Pro/Pro+ only.
+
+To switch modes, double-tap the power button while riding. The display will flash the
+current mode name.
+
+================================================================================
+SECTION 4: TROUBLESHOOTING
+================================================================================
+
+Scooter does not turn on:
+- Ensure battery is charged above 5%. A deeply discharged battery may show no response
+  for up to 60 seconds after plugging in the charger.
+- Check that the stem is fully clicked into the locked position — a safety interlock
+  prevents the motor from activating if the stem is loose.
+- Perform a hard reset: hold the power button for 10 seconds until the display flashes.
+- If the issue persists, the BMS may have triggered a protection shutdown. Connect to
+  the EcoRide app — the "Diagnostics" tab will show the fault code.
+
+Motor cuts out while riding:
+- This typically indicates thermal throttling. The motor automatically reduces power
+  above 65°C to prevent damage. Stop riding, park in shade, and wait 10–15 minutes.
+- Check for error code E03 on the display. E03 indicates motor overcurrent — usually
+  caused by riding on steep inclines at full throttle for extended durations.
+
+Battery drains faster than expected:
+- Cold weather significantly reduces effective range. At 5°C, expect 20–30% less range
+  than the rated figure.
+- Riding consistently in Sport Mode on Pro/Pro+ reduces range by up to 35%.
+- Check tire pressure. Under-inflated tires increase rolling resistance and drain the
+  battery faster. Recommended pressure: 45–50 PSI.
+- If capacity loss exceeds 20% within the first 12 months, contact support — this may
+  be covered under the battery warranty.
+
+Brakes feel spongy or unresponsive:
+- Disc brake pads wear over time. Inspect pad thickness every 3 months or 500 km,
+  whichever comes first. Minimum pad thickness before replacement: 1.5 mm.
+- If the rear regenerative brake feels inconsistent, recalibrate it via the EcoRide app
+  under Settings > Brake Calibration.
+- Do not ride if brakes feel completely unresponsive. Contact support immediately.
+
+Error Codes Reference:
+- E01 : Low battery — charge immediately
+- E02 : Over-voltage — stop charging, allow battery to cool
+- E03 : Motor overcurrent — rest for 15 minutes, reduce throttle on inclines
+- E04 : BMS communication failure — hard reset required
+- E05 : Throttle sensor fault — do not ride, contact support
+- E06 : Brake sensor fault — do not ride, contact support
+
+================================================================================
+SECTION 5: WARRANTY & REFUND POLICY
+================================================================================
+
+Warranty Coverage:
+- Frame and structural components : 2 years from purchase date
+- Battery (capacity warranty)     : 1 year or 300 charge cycles, whichever comes first
+- Motor and electronics           : 1 year from purchase date
+- Consumables (tires, brake pads) : Not covered under warranty
+
+Warranty is valid only if:
+1. The scooter is purchased from an authorised EcoRide dealer or ecoride.com.
+2. The scooter is registered within 30 days of purchase via the EcoRide app.
+3. Damage is not caused by misuse, water submersion, or unauthorised modifications.
+
+To file a warranty claim:
+- Email support@ecoride.com with your order ID, registered email, and a description of
+  the fault. Attach photos or app diagnostic screenshots where possible.
+- EcoRide will respond within 2 business days with next steps.
+- Approved claims receive either a repair, replacement unit, or store credit at
+  EcoRide's discretion.
+
+Refund Policy:
+- Unopened products     : Full refund within 7 days of delivery, no questions asked.
+- Opened / used         : Eligible for refund within 15 days if a genuine manufacturing
+                          defect is confirmed by EcoRide's support team.
+- After 15 days         : No cash refunds. Store credit or warranty replacement only.
+- Return shipping cost  : Borne by the customer unless the defect is confirmed on
+                          EcoRide's side, in which case a prepaid label is issued.
+
+VIP Concierge Programme:
+EcoRide VIP members enjoy priority support, free annual servicing, and exclusive early
+access to new model launches. VIP status is granted upon a one-time upgrade fee of
+$100 debited from the customer's EcoRide wallet.
+
+Current VIP Welcome Perk (June 2025):
+New VIP members receive a complimentary EcoRide Fast Charger (valued at $45) shipped
+within 5–7 business days of upgrade confirmation.
+
+================================================================================
+SECTION 6: MAINTENANCE SCHEDULE
+================================================================================
+
+Every month / 100 km (whichever comes first):
+- Check tire pressure (target: 45–50 PSI)
+- Inspect brakes for responsiveness
+- Clean scooter deck with a dry or slightly damp cloth
+- Check all bolts on the stem and handlebar (target torque: 8–10 Nm)
+
+Every 3 months / 500 km:
+- Inspect brake pad thickness (replace if below 1.5 mm)
+- Lubricate the folding mechanism with light machine oil
+- Check wheel bearings for play or roughness
+- Update firmware via the EcoRide app if prompted
+
+Annually:
+- Professional service recommended at an authorised EcoRide service centre
+- Full brake bleed and pad replacement (if worn)
+- Battery capacity diagnostic via the app (tap Diagnostics > Battery Health)
+
+Cleaning Notes:
+- The EcoSport X is rated IP54 — it can handle light rain and splashes.
+- Never use a pressure washer or submerge any part of the scooter.
+- Avoid spraying water directly at the charging port, display, or motor housing.
+
+================================================================================
+SECTION 7: SAFETY & COMPLIANCE
+================================================================================
+
+- Always wear a helmet. EcoRide strongly recommends CE-certified helmets.
+- The EcoSport X is classified as a Personal Light Electric Vehicle (PLEV).
+  Riders must comply with local road laws, which may restrict use on pavements or
+  require registration in certain regions.
+- Maximum rider age: 16 years and above.
+- Do not carry passengers. The scooter is designed for a single rider only.
+- Do not modify the scooter's firmware, motor controller, or battery. Doing so voids
+  the warranty and may create safety hazards.
+- In the event of a collision or significant impact, retire the scooter from use and
+  have the frame inspected by an authorised service centre before riding again.
+
+Emergency Contact:
+For urgent safety issues, call EcoRide Support: +91-1800-ECO-RIDE (available 9am–6pm IST)
+Email: support@ecoride.com | App: tap Help > Contact Support
+================================================================================
