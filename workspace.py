@@ -1,5 +1,7 @@
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+load_dotenv()
 
 
 CLAUDE_MD = """
@@ -22,7 +24,8 @@ CLAUDE_MD = """
 def write_claude_md(content: str) -> None:
     """Write the given content to .claude/CLAUDE.md, creating directories if needed.
     """
-    claude_dir = Path(os.getenv("HOME")) / ".claude"
-    print(f"Writing CLAUDE.md")
+    base = Path(os.getcwd()) / "user_id" / "101"
+    claude_dir = base / ".claude"
+    print(f"Writing CLAUDE.md to {claude_dir / 'CLAUDE.md'}...")
     claude_dir.mkdir(parents=True, exist_ok=True)
     (claude_dir / "CLAUDE.md").write_text(content)

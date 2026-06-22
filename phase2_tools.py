@@ -22,7 +22,7 @@ env = {
     "ANTHROPIC_BASE_URL": "https://openrouter.ai/api",
     "ANTHROPIC_AUTH_TOKEN": os.getenv("OPENROUTER_API_KEY"),
     "ANTHROPIC_API_KEY": "",
-    "HOME": os.getenv("HOME"),
+    "HOME": os.getenv("MY_HOME"),
 }
 
 # ---------------------------------------------------------------------------
@@ -126,7 +126,7 @@ async def stream_response(user_input: str) -> None:
 async def main():
     questions = [
         "Where is my order ORD-001?",
-        "What is my wallet balance for customer CUST-042?",
+        "What is my wallet balance for my customer id  CUST-042?",
     ]
     for q in questions:
         print(f"\nCustomer: {q}")

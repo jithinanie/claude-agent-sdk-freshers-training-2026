@@ -28,7 +28,7 @@ env = {
     "ANTHROPIC_BASE_URL": "https://openrouter.ai/api",
     "ANTHROPIC_AUTH_TOKEN": os.getenv("OPENROUTER_API_KEY"),
     "ANTHROPIC_API_KEY": "",
-    "HOME": os.getenv("HOME"),
+    "HOME": os.getenv("MY_HOME"),
 }
 
 # ---------------------------------------------------------------------------
@@ -146,6 +146,7 @@ async def run_with_hooks(user_input: str) -> str:
         system_prompt=SYSTEM_PROMPT,
         setting_sources=["project"],
         mcp_servers={"ecoride": ecoride_server},
+        
         allowed_tools=[
             "mcp__ecoride__check_order_status",
             "mcp__ecoride__get_wallet_balance",

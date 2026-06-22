@@ -27,7 +27,7 @@ env = {
     "ANTHROPIC_BASE_URL": "https://openrouter.ai/api",
     "ANTHROPIC_AUTH_TOKEN": os.getenv("OPENROUTER_API_KEY"),
     "ANTHROPIC_API_KEY": "",
-    "HOME": os.getenv("HOME"),
+    "HOME": os.getenv("MY_HOME"),
 }
 
 async def stream_response(user_input: str) -> str:
