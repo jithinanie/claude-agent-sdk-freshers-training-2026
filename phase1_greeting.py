@@ -24,12 +24,10 @@ Only ask for clarification if their intent is genuinely ambiguous and you truly 
 write_claude_md(CLAUDE_MD)  # write the system prompt to .claude/CLAUDE.md for project-wide access
 
 env = {
-    "ANTHROPIC_BASE_URL": "https://openrouter.ai/api",
-    "ANTHROPIC_AUTH_TOKEN": os.getenv("OPENROUTER_API_KEY"),
-    "ANTHROPIC_API_KEY": "",
+    "ANTHROPIC_BASE_URL": "https://llm.keyvalue.systems",
+    "ANTHROPIC_API_KEY": os.getenv("LITE_LLM_KEY"),
     "HOME": os.getenv("MY_HOME"),
 }
-
 async def stream_response(user_input: str) -> str:
     """Stream Spark's reply to stdout and return the full text for routing."""
     options = ClaudeAgentOptions(

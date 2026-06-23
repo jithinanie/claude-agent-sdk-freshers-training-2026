@@ -20,3 +20,4 @@ dist/
 .claude
 stream_translator.py
 *user_id/*
+test_litellm_key.py

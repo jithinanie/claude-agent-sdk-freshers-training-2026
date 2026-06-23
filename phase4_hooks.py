@@ -25,9 +25,8 @@ from workspace import CLAUDE_MD, write_claude_md
 
 load_dotenv()
 env = {
-    "ANTHROPIC_BASE_URL": "https://openrouter.ai/api",
-    "ANTHROPIC_AUTH_TOKEN": os.getenv("OPENROUTER_API_KEY"),
-    "ANTHROPIC_API_KEY": "",
+    "ANTHROPIC_BASE_URL": "https://llm.keyvalue.systems",
+    "ANTHROPIC_API_KEY": os.getenv("LITE_LLM_KEY"),
     "HOME": os.getenv("MY_HOME"),
 }
 
