@@ -18,10 +18,9 @@ from workspace import CLAUDE_MD, write_claude_md
 
 load_dotenv()
 env = {
-    "ANTHROPIC_BASE_URL": "https://openrouter.ai/api",
-    "ANTHROPIC_AUTH_TOKEN": os.getenv("OPENROUTER_API_KEY"),
-    "ANTHROPIC_API_KEY": "",
-    "HOME": os.getenv("HOME"),
+    "ANTHROPIC_BASE_URL": "https://llm.keyvalue.systems",
+    "ANTHROPIC_API_KEY": os.getenv("LITE_LLM_KEY"),
+    "HOME": os.getenv("MY_HOME"),
 }
 
 # ---------------------------------------------------------------------------
@@ -81,7 +80,9 @@ async def file_read(user_input: str) -> str:
         system_prompt=SYSTEM_PROMPT,
         setting_sources=['project'],
         mcp_servers={"ecoride": ecoride_server},
-        allowed_tools=["mcp__ecoride__check_order_status", "mcp__ecoride__get_wallet_balance", "Read", "Bash", "Glob", "Grep"],
+        # TODO: add allowed_tools — include both mcp tools and built-in file tools
+        # https://code.claude.com/docs/en/agent-sdk/python#claudeagentoptions
+        allowed_tools=...,  # FILL IN
         include_partial_messages=True,  # enables streaming chunks
         env=env,
     )
@@ -122,6 +123,7 @@ async def main():
     user_input = (
         "My scooter won't start and I need to get to work! "
         "Is there a known battery issue, and what is the refund policy if I return it?"
+        "Give me the exact file path of the manual for the scooter."
     )
     print(f"Customer: {user_input}\n")
     print("--- File Read trace ---")
