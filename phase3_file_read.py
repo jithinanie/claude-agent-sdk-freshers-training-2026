@@ -78,7 +78,7 @@ write_claude_md(CLAUDE_MD)
 async def file_read(user_input: str) -> str:
     options = ClaudeAgentOptions(
         system_prompt=SYSTEM_PROMPT,
-        setting_sources=['user'],
+        setting_sources=['project'],
         mcp_servers={"ecoride": ecoride_server},
         # TODO: add allowed_tools — include both mcp tools and built-in file tools
         # https://code.claude.com/docs/en/agent-sdk/python#claudeagentoptions
