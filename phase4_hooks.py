@@ -108,24 +108,11 @@ INJECTION_PHRASES = {
     "act as",
 }
 
-async def moderate_prompt_injection(
-    input: HookInput,
-    tool_use_id: str | None,
-    context: HookContext,
-) -> HookJSONOutput:
-    if input.get("hook_event_name") != "UserPromptSubmit":
-        return {"continue_": True}
-
-    lowered = (input.get("prompt") or "").lower()
-    found = [phrase for phrase in INJECTION_PHRASES if phrase in lowered]
-    if found:
-        print(f"\n  [HOOK: UserPromptSubmit BLOCKED]  Injection attempt: {found}", flush=True)
-        return {
-            "continue_": False,
-            "stopReason": "Your message contains disallowed instructions. Please ask a genuine support question.",
-        }
-
-    return {"continue_": True}
+# TODO: implement moderate_prompt_injection — check hook_event_name, scan prompt against INJECTION_PHRASES
+# return {"continue_": False, "stopReason": "..."} to block, {"continue_": True} to allow
+# https://code.claude.com/docs/en/agent-sdk/python#hookmatcher
+async def moderate_prompt_injection(input: HookInput, tool_use_id: str | None, context: HookContext) -> HookJSONOutput:
+    ...  # FILL IN
 
 # ---------------------------------------------------------------------------
 # Agent
@@ -153,15 +140,10 @@ async def run_with_hooks(user_input: str) -> str:
         ],
         include_partial_messages=True,
         env=env,
-        # Register hooks
-        hooks={
-            "PostToolUse": [
-                HookMatcher(matcher=None, hooks=[audit_tool_response])
-            ],
-            "UserPromptSubmit": [
-                HookMatcher(matcher=None, hooks=[moderate_prompt_injection])
-            ],
-        },
+        # TODO: wire audit_tool_response and moderate_prompt_injection into hooks
+        # HINT : hooks{"PostToolUse": [HookMatcher(matcher=None, hooks=[fn])], "UserPromptSubmit": [...]}
+        # https://code.claude.com/docs/en/agent-sdk/python#hookmatcher
+        hooks=...,  # FILL IN
     )
 
     full_text = []

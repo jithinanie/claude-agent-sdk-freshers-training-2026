@@ -23,7 +23,7 @@ env = {
     "ANTHROPIC_API_KEY": os.getenv("LITE_LLM_KEY"),
     "HOME": os.getenv("MY_HOME"),
 }
-
+print(env)
 # ---------------------------------------------------------------------------
 # Mock databases
 # ---------------------------------------------------------------------------
@@ -43,8 +43,8 @@ WALLETS = {
 # Tools
 # ---------------------------------------------------------------------------
 
-# FILL IN: Add @tool("check_order_status", "<description>", {"order_id": str})
-@tool("check_order_status", "Check the delivery status of an EcoRide order", {"order_id": str})
+# TODO: decorate check_order_status with @tool(name, description, input_schema)
+# https://code.claude.com/docs/en/agent-sdk/python#tool
 async def check_order_status(args: dict) -> dict:
     order_id = args["order_id"]
     order = ORDERS.get(order_id)
@@ -53,8 +53,8 @@ async def check_order_status(args: dict) -> dict:
     return {"content": [{"type": "text", "text": f"Order {order_id}: {order['status']}. ETA: {order.get('eta', 'N/A')}"}]}
 
 
-# FILL IN: Add @tool("get_wallet_balance", "<description>", {"customer_id": str})
-@tool("get_wallet_balance", "Get the wallet balance for an EcoRide customer", {"customer_id": str})
+# TODO: decorate get_wallet_balance with @tool — same pattern as check_order_status above
+# https://code.claude.com/docs/en/agent-sdk/python#tool
 async def get_wallet_balance(args: dict) -> dict:
     customer_id = args["customer_id"]
     wallet = WALLETS.get(customer_id)
@@ -67,13 +67,10 @@ async def get_wallet_balance(args: dict) -> dict:
 # MCP server
 # ---------------------------------------------------------------------------
 
-# FILL IN: Add check_order_status and get_wallet_balance to the tools list
-ecoride_server = create_sdk_mcp_server(
-    name="ecoride",
-    tools=[check_order_status, get_wallet_balance],
-)
+# TODO: create ecoride_server using create_sdk_mcp_server(name, tools=[...])
+# https://code.claude.com/docs/en/agent-sdk/python#create_sdk_mcp_server
 
-# ---------------------------------------------------------------------------
+# # ---------------------------------------------------------------------------
 # Options & query
 # ---------------------------------------------------------------------------
 
@@ -89,11 +86,9 @@ async def stream_response(user_input: str) -> None:
     options = ClaudeAgentOptions(
         system_prompt=SYSTEM_PROMPT,
         setting_sources=['project'],
-        # FILL IN: Register the MCP server — mcp_servers={"ecoride": ecoride_server}
-        mcp_servers={"ecoride": ecoride_server},
-        # FILL IN: Allow tools by name — allowed_tools=["mcp__ecoride__check_order_status", "mcp__ecoride__get_wallet_balance"]
-        allowed_tools=["mcp__ecoride__check_order_status", "mcp__ecoride__get_wallet_balance"],
-        include_partial_messages=True,  # enables streaming chunks
+        # TODO: add mcp_servers and allowed_tools — tools are named mcp__<server>__<tool>
+        # https://code.claude.com/docs/en/agent-sdk/python#claudeagentoptions
+        include_partial_messages=True,
         env=env,
     )
 

@@ -30,13 +30,9 @@ env = {
 }
 async def stream_response(user_input: str) -> str:
     """Stream Spark's reply to stdout and return the full text for routing."""
-    options = ClaudeAgentOptions(
-        system_prompt=SYSTEM_PROMPT,
-        setting_sources=['project'],
-        tools=[],  # No tools in Phase 1 — pure conversation
-        include_partial_messages=True,  # enables streaming chunks
-        env=env,
-    )
+    # TODO: build ClaudeAgentOptions — set system_prompt, setting_sources, tools, include_partial_messages, env
+    # https://code.claude.com/docs/en/agent-sdk/python#claudeagentoptions
+    options = ClaudeAgentOptions(...)  # FILL IN
 
     full_text = []
 

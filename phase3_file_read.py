@@ -78,9 +78,11 @@ write_claude_md(CLAUDE_MD)
 async def file_read(user_input: str) -> str:
     options = ClaudeAgentOptions(
         system_prompt=SYSTEM_PROMPT,
-        setting_sources=['project'],
+        setting_sources=['user'],
         mcp_servers={"ecoride": ecoride_server},
-        allowed_tools=["mcp__ecoride__check_order_status", "mcp__ecoride__get_wallet_balance", "Read", "Bash", "Glob", "Grep"],
+        # TODO: add allowed_tools — include both mcp tools and built-in file tools
+        # https://code.claude.com/docs/en/agent-sdk/python#claudeagentoptions
+        allowed_tools=...,  # FILL IN
         include_partial_messages=True,  # enables streaming chunks
         env=env,
     )
@@ -121,6 +123,7 @@ async def main():
     user_input = (
         "My scooter won't start and I need to get to work! "
         "Is there a known battery issue, and what is the refund policy if I return it?"
+        "Give me the exact file path of the manual for the scooter."
     )
     print(f"Customer: {user_input}\n")
     print("--- File Read trace ---")
