@@ -123,7 +123,6 @@ async def main():
     user_input = (
         "My scooter won't start and I need to get to work! "
         "Is there a known battery issue, and what is the refund policy if I return it?"
-        "Give me the exact file path of the manual for the scooter."
     )
     print(f"Customer: {user_input}\n")
     print("--- File Read trace ---")
