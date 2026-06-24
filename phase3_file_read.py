@@ -1,5 +1,4 @@
 """
-Phase 4 — The Grumpy Customer (ReAct)
 Concepts: ClaudeSDKClient, multi-turn session, ToolUseBlock tracing, max_turns
 """
 
