@@ -1,5 +1,5 @@
 """
-Phase 5 — Hooks
+Hooks
 Concepts: HookMatcher, HookCallback, PreToolUse (block/allow), PostToolUse (audit log),
           UserPromptSubmit (input guard), Stop (session summary)
 """
